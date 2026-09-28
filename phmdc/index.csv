@@ -1,0 +1,95 @@
+﻿specimen,cycle,rep,path,n_rows,n_cols,col_names,t_file_err_s,time_ok,fs_hz
+T1,50000,1,T1/50000/signal_1.csv,4000,3,time|ch1|ch2,2.0000000000314905e-09,True,20000000.0
+T1,50000,2,T1/50000/signal_2.csv,4000,3,time|ch1|ch2,2.0000000000314905e-09,True,20000000.0
+T1,60000,1,T1/60000/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,60000,2,T1/60000/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,62500,1,T1/62500/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,62500,2,T1/62500/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,65500,1,T1/65500/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,65500,2,T1/65500/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,69025,1,T1/69025/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,69025,2,T1/69025/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,70026,1,T1/70026/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,70026,2,T1/70026/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,70766,1,T1/70766/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T1,70766,2,T1/70766/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T2,50000,1,T2/50000/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T2,50000,2,T2/50000/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T2,70033,1,T2/70033/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T2,70033,2,T2/70033/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T2,72000,1,T2/72000/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T2,72000,2,T2/72000/signal_2.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T3,14000,1,T3/14000/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,14000,2,T3/14000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,50000,1,T3/50000/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,50000,2,T3/50000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,55391,1,T3/55391/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,55391,2,T3/55391/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,57038,1,T3/57038/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,57038,2,T3/57038/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,60035,1,T3/60035/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,60035,2,T3/60035/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,62017,1,T3/62017/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,62017,2,T3/62017/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,64019,1,T3/64019/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,64019,2,T3/64019/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,65029,1,T3/65029/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,65029,2,T3/65029/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,66012,1,T3/66012/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,66012,2,T3/66012/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,66510,1,T3/66510/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T3,66510,2,T3/66510/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,55900,1,T4/55900/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,55900,2,T4/55900/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,60200,1,T4/60200/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,60200,2,T4/60200/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,65001,1,T4/65001/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,65001,2,T4/65001/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,67054,1,T4/67054/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,67054,2,T4/67054/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,70016,1,T4/70016/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,70016,2,T4/70016/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,71130,1,T4/71130/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,71130,2,T4/71130/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,73210,1,T4/73210/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,73210,2,T4/73210/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,75045,1,T4/75045/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T4,75045,2,T4/75045/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T5,42000,1,T5/42000/signal_1.csv,4000,3,time|ch1|ch2,5.000000000001477e-08,False,20000000.0
+T5,42000,2,T5/42000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T5,46000,1,T5/46000/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T5,46000,2,T5/46000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T5,51000,1,T5/51000/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T5,51000,2,T5/51000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T5,56000,1,T5/56000/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T5,56000,2,T5/56000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T6,55000,1,T6/55000/signal_1.csv,4000,3,time|ch1|ch2,5.500000000000134e-07,False,20000000.0
+T6,55000,2,T6/55000/signal_2.csv,4000,4,time|ch1|ch2|Unnamed: 3,5.500000000000134e-07,False,20000000.0
+T6,60078,1,T6/60078/signal_1.csv,4000,4,time|ch1|ch2|Unnamed: 3,5.500000000000134e-07,False,20000000.0
+T6,60078,2,T6/60078/signal_2.csv,4000,4,time|ch1|ch2|Unnamed: 3,5.500000000000134e-07,False,20000000.0
+T6,68091,1,T6/68091/signal_1.csv,4000,5,time|ch1|ch2|Unnamed: 3|Unnamed: 4,5.000000000002832e-08,False,20000000.0
+T6,68091,2,T6/68091/signal_2.csv,4000,7,time|ch1|ch2|Unnamed: 3|Unnamed: 4|Unnamed: 5|Unnamed: 6,5.500000000000134e-07,False,20000000.0
+T6,69018,1,T6/69018/signal_1.csv,4000,7,time|ch1|ch2|Unnamed: 3|Unnamed: 4|Unnamed: 5|Unnamed: 6,5.500000000000134e-07,False,20000000.0
+T6,69018,2,T6/69018/signal_2.csv,4000,5,time|ch1|ch2|Unnamed: 3|Unnamed: 4,5.000000000002832e-08,False,20000000.0
+T6,72516,1,T6/72516/signal_1.csv,4000,3,time|ch1|ch2,5.000000000002832e-08,False,20000000.0
+T6,72516,2,T6/72516/signal_2.csv,4000,5,time|ch1|ch2|Unnamed: 3|Unnamed: 4,5.000000000002832e-08,False,20000000.0
+T6,73211,1,T6/73211/signal_1.csv,4000,5,time|ch1|ch2|Unnamed: 3|Unnamed: 4,5.000000000002832e-08,False,20000000.0
+T6,73211,2,T6/73211/signal_2.csv,4000,3,time|ch1|ch2,5.000000000002832e-08,False,20000000.0
+T7,36001,1,T7/36001/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T7,36001,2,T7/36001/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T7,40167,1,T7/40167/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T7,40167,2,T7/40167/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T7,44054,1,T7/44054/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T7,44054,2,T7/44054/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T7,47022,1,T7/47022/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T7,47022,2,T7/47022/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,40000,1,T8/40000/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,40000,2,T8/40000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,50000,1,T8/50000/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,50000,2,T8/50000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,70000,1,T8/70000/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,70000,2,T8/70000/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,74883,1,T8/74883/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,74883,2,T8/74883/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,76931,1,T8/76931/signal_1.csv,4000,3,time|ch1|ch2,,False,20000000.0
+T8,76931,2,T8/76931/signal_2.csv,4000,3,time|ch1|ch2,,False,20000000.0

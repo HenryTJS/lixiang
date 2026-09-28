@@ -1,0 +1,68 @@
+{
+  "_说明": [
+    "★★ 数据集路径的唯一入口（2026-09-28）。要换盘/改目录，只改本文件，不要再改代码。",
+    "",
+    "用法（在仓库根 D:\\lixiang 下执行）：",
+    "    预览（不改动）：  powershell -ExecutionPolicy Bypass -File tools\\relink_data.ps1",
+    "    搬迁数据：        powershell -ExecutionPolicy Bypass -File tools\\relink_data.ps1 -Migrate",
+    "    重接链接：        powershell -ExecutionPolicy Bypass -File tools\\relink_data.ps1 -Apply",
+    "    拆链还原：        powershell -ExecutionPolicy Bypass -File tools\\relink_data.ps1 -Unlink -Restore",
+    "",
+    "原理：用 Windows 目录联接（junction）把仓库里的数据目录指向外接盘。",
+    "      junction 不需要管理员权限，不占用 D 盘空间；建好后仓库内所有相对路径照旧有效，",
+    "      因此 main/ 、l1/ 、phmdc/ 下的脚本与看板导出器【一行都不用改】。",
+    "",
+    "data_root 可填任意盘或网络路径。**当前用法 = 数据直接放 E 盘根，不套 shm_data 层**：",
+    "    \"E:\\\\\"              → 实际目标 E:\\l1\\L1-03 、 E:\\main\\001 、 E:\\phmdc\\T1",
+    "    \"F:\\\\data\\\\shm\"     → 实际目标 F:\\data\\shm\\l1\\L1-03 …（换盘只改这一行，再跑 -Apply）",
+    "    \"\\\\\\\\nas\\\\shm\"       （网络共享；跨网络用 junction 时性能取决于网络）",
+    "",
+    "⚠️ 裸盘符（如 \"E:\\\\\"）是合法的，脚本会归一化；但不要写成 \"E:\"（Python 拼接会得到盘符相对路径 E:l1）。",
+    "",
+    "items 规则：",
+    "    link   —— 仓库内的路径，可含通配符 * ? [0-9]（只匹配已存在的目录）",
+    "    target —— link 含通配符时：视为【容器目录】，实际目标 = data_root/target/<目录名>",
+    "              link 不含通配符：视为【精确目标】，实际目标 = data_root/target",
+    "",
+    "环境变量 SHM_DATA_ROOT 优先级高于本文件的 data_root（临时换盘用，不改文件）。"
+  ],
+  "data_root": "E:\\",
+  "items": [
+    {
+      "name": "L1 原始数据（13 组，约 30 GB）",
+      "link": "l1/L1-*",
+      "target": "l1",
+      "备注": "L1-03/04/05/09/49/50/51/52/54/55/56/59/60，含 .pridb / DFOS / LUNA / PDF"
+    },
+    {
+      "name": "主样本原始数据（001-027，27 组）",
+      "link": "main/[0-9][0-9][0-9]",
+      "target": "main",
+      "备注": "各组的光纤/声发射/应变 CSV"
+    },
+    {
+      "name": "主样本对齐输出",
+      "link": "main/aligned",
+      "target": "main/aligned",
+      "备注": "可重跑生成（prepare_data.py align），搬走只为省 D 盘空间"
+    },
+    {
+      "name": "主样本弱标签",
+      "link": "main/weak_labels",
+      "target": "main/weak_labels",
+      "备注": "b1/b2/b3，可重跑生成"
+    },
+    {
+      "name": "phmdc 原始波形（T1-T8）",
+      "link": "phmdc/T[1-8]",
+      "target": "phmdc",
+      "备注": "PHM2019 铝搭接件波形 + 裂纹长度真值"
+    }
+  ],
+  "_未搬迁（留在 D 盘，体量小或可重建）": [
+    "main/cache（131.8 MB，逐点 D 缓存，可重建）",
+    "main/results、main/figures、l1/results、l1/figures（产物，合计约 14 MB）",
+    "dashboard/data（19 MB，前端数据包，由导出器生成）",
+    "phmdc/results（报告与表格，10 MB 内）"
+  ]
+}

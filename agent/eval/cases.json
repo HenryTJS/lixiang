@@ -1,0 +1,3115 @@
+[
+ {
+  "id": "A-016-warn",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 什么时候预警的？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 46.9,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [
+   [
+    "提前",
+    "lead",
+    "裕度"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-lead",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 预警时距离失效还剩多少寿命？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 52.1,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-grade",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的预警结果评级如何？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "A合理"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-lvl",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的 L1/L2/L3 三个级别分别在哪？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 45.9,
+    "tol": 0.3
+   },
+   {
+    "v": 59.9,
+    "tol": 0.3
+   },
+   {
+    "v": 95.8,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-stiff5%",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的刚度损失达到 5% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 49.0,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-stiff10%",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的刚度损失达到 10% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 59.0,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-stiff30%",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的刚度损失达到 30% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 87.0,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-stiff50%",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的刚度损失达到 50% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 87.0,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-stiffmax",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的刚度损失率最大到多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 3.758,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-samp",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的采样率是多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 10.0,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-016-dur",
+  "category": "状态查询",
+  "gid": "016",
+  "question": "016 的采集时长是多少小时？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 1.39,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-warn",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 什么时候预警的？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 85.9,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [
+   [
+    "提前",
+    "lead",
+    "裕度"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-lead",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 预警时距离失效还剩多少寿命？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 13.1,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-grade",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 的预警结果评级如何？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "A合理"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-stiff5%",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 的刚度损失达到 5% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 48.9,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-stiff10%",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 的刚度损失达到 10% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 88.0,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-stiff30%",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 的刚度损失达到 30% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 88.0,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-stiff50%",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 的刚度损失达到 50% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 89.1,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-stiffmax",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 的刚度损失率最大到多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 4.953,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-samp",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 的采样率是多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 10.0,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-017-dur",
+  "category": "状态查询",
+  "gid": "017",
+  "question": "017 的采集时长是多少小时？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 1.28,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-018-warn",
+  "category": "状态查询",
+  "gid": "018",
+  "question": "018 什么时候预警的？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 71.0,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [
+   [
+    "提前",
+    "lead",
+    "裕度"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-018-lead",
+  "category": "状态查询",
+  "gid": "018",
+  "question": "018 预警时距离失效还剩多少寿命？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 28.0,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-018-grade",
+  "category": "状态查询",
+  "gid": "018",
+  "question": "018 的预警结果评级如何？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "A合理"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-018-stiff5%",
+  "category": "状态查询",
+  "gid": "018",
+  "question": "018 的刚度损失达到 5% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 94.3,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-018-stiff10%",
+  "category": "状态查询",
+  "gid": "018",
+  "question": "018 的刚度损失达到 10% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 95.7,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-018-stiffmax",
+  "category": "状态查询",
+  "gid": "018",
+  "question": "018 的刚度损失率最大到多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 0.314,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-018-samp",
+  "category": "状态查询",
+  "gid": "018",
+  "question": "018 的采样率是多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 1.0,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-018-dur",
+  "category": "状态查询",
+  "gid": "018",
+  "question": "018 的采集时长是多少小时？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 0.98,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-warn",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 什么时候预警的？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 77.5,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [
+   [
+    "提前",
+    "lead",
+    "裕度"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-lead",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 预警时距离失效还剩多少寿命？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 21.5,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-grade",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 的预警结果评级如何？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "A合理"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-stiff5%",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 的刚度损失达到 5% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 57.0,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-stiff10%",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 的刚度损失达到 10% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 57.0,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-stiff30%",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 的刚度损失达到 30% 是在寿命的什么位置？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 73.4,
+    "tol": 0.3
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-stiffmax",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 的刚度损失率最大到多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 0.476,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-samp",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 的采样率是多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 1.0,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-019-dur",
+  "category": "状态查询",
+  "gid": "019",
+  "question": "019 的采集时长是多少小时？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 1.11,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-020-warn",
+  "category": "状态查询",
+  "gid": "020",
+  "question": "020 什么时候预警的？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 72.2,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [
+   [
+    "提前",
+    "lead",
+    "裕度"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-020-lead",
+  "category": "状态查询",
+  "gid": "020",
+  "question": "020 预警时距离失效还剩多少寿命？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 26.8,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-020-grade",
+  "category": "状态查询",
+  "gid": "020",
+  "question": "020 的预警结果评级如何？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "A合理"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-020-stiffmax",
+  "category": "状态查询",
+  "gid": "020",
+  "question": "020 的刚度损失率最大到多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 0.0,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-020-samp",
+  "category": "状态查询",
+  "gid": "020",
+  "question": "020 的采样率是多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 1.0,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "A-020-dur",
+  "category": "状态查询",
+  "gid": "020",
+  "question": "020 的采集时长是多少小时？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 1.64,
+    "tol": 0.05
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": ""
+ },
+ {
+  "id": "C-cmp1",
+  "category": "跨试件对比",
+  "gid": null,
+  "question": "016 和 017 谁先预警？分别是什么时候？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 46.9,
+    "tol": 0.15
+   },
+   {
+    "v": 85.9,
+    "tol": 0.15
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "compare"
+  ],
+  "note": ""
+ },
+ {
+  "id": "C-cmp2",
+  "category": "跨试件对比",
+  "gid": null,
+  "question": "016 到 020 里，哪一组预警得最晚？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "017"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "compare"
+  ],
+  "note": ""
+ },
+ {
+  "id": "C-cmp3",
+  "category": "跨试件对比",
+  "gid": null,
+  "question": "主样本五组里哪几组有刚度退化信号？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "016",
+    "017",
+    "018",
+    "019"
+   ]
+  ],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [
+   "compare"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-49",
+  "category": "机制与定位",
+  "gid": "L1-49",
+  "question": "L1-49 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-49-x",
+  "category": "机制与定位",
+  "gid": "L1-49",
+  "question": "L1-49 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 52.4,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-50",
+  "category": "机制与定位",
+  "gid": "L1-50",
+  "question": "L1-50 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-50-x",
+  "category": "机制与定位",
+  "gid": "L1-50",
+  "question": "L1-50 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 81.1,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-51",
+  "category": "机制与定位",
+  "gid": "L1-51",
+  "question": "L1-51 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-51-x",
+  "category": "机制与定位",
+  "gid": "L1-51",
+  "question": "L1-51 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 49.1,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-52",
+  "category": "机制与定位",
+  "gid": "L1-52",
+  "question": "L1-52 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-52-x",
+  "category": "机制与定位",
+  "gid": "L1-52",
+  "question": "L1-52 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 50.1,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-54",
+  "category": "机制与定位",
+  "gid": "L1-54",
+  "question": "L1-54 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-54-x",
+  "category": "机制与定位",
+  "gid": "L1-54",
+  "question": "L1-54 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 73.3,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-55",
+  "category": "机制与定位",
+  "gid": "L1-55",
+  "question": "L1-55 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-55-x",
+  "category": "机制与定位",
+  "gid": "L1-55",
+  "question": "L1-55 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 84.7,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-56",
+  "category": "机制与定位",
+  "gid": "L1-56",
+  "question": "L1-56 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-56-x",
+  "category": "机制与定位",
+  "gid": "L1-56",
+  "question": "L1-56 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 78.8,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-59",
+  "category": "机制与定位",
+  "gid": "L1-59",
+  "question": "L1-59 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-59-x",
+  "category": "机制与定位",
+  "gid": "L1-59",
+  "question": "L1-59 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 64.7,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-60",
+  "category": "机制与定位",
+  "gid": "L1-60",
+  "question": "L1-60 的损伤机制是什么？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "剪切",
+    "分层",
+    "脱粘",
+    "基体",
+    "纤维"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": ""
+ },
+ {
+  "id": "M-L1-60-x",
+  "category": "机制与定位",
+  "gid": "L1-60",
+  "question": "L1-60 的损伤位置在哪里？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 74.7,
+    "tol": 8.0
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-016",
+  "category": "检修建议",
+  "gid": "016",
+  "question": "016 需要维修吗？接下来该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-016-conf",
+  "category": "检修建议",
+  "gid": "016",
+  "question": "016 的检修建议有多大把握？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "high",
+    "置信",
+    "把握"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-017",
+  "category": "检修建议",
+  "gid": "017",
+  "question": "017 需要维修吗？接下来该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-017-conf",
+  "category": "检修建议",
+  "gid": "017",
+  "question": "017 的检修建议有多大把握？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "high",
+    "置信",
+    "把握"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-018",
+  "category": "检修建议",
+  "gid": "018",
+  "question": "018 需要维修吗？接下来该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "加强监测"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-018-conf",
+  "category": "检修建议",
+  "gid": "018",
+  "question": "018 的检修建议有多大把握？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "high",
+    "置信",
+    "把握"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-019",
+  "category": "检修建议",
+  "gid": "019",
+  "question": "019 需要维修吗？接下来该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "计划检修"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-019-conf",
+  "category": "检修建议",
+  "gid": "019",
+  "question": "019 的检修建议有多大把握？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "high",
+    "置信",
+    "把握"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-020",
+  "category": "检修建议",
+  "gid": "020",
+  "question": "020 需要维修吗？接下来该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "加强监测"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-020-conf",
+  "category": "检修建议",
+  "gid": "020",
+  "question": "020 的检修建议有多大把握？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "medium",
+    "置信",
+    "把握"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-49",
+  "category": "检修建议",
+  "gid": "L1-49",
+  "question": "L1-49 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-50",
+  "category": "检修建议",
+  "gid": "L1-50",
+  "question": "L1-50 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-51",
+  "category": "检修建议",
+  "gid": "L1-51",
+  "question": "L1-51 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-52",
+  "category": "检修建议",
+  "gid": "L1-52",
+  "question": "L1-52 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-54",
+  "category": "检修建议",
+  "gid": "L1-54",
+  "question": "L1-54 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-55",
+  "category": "检修建议",
+  "gid": "L1-55",
+  "question": "L1-55 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-56",
+  "category": "检修建议",
+  "gid": "L1-56",
+  "question": "L1-56 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-59",
+  "category": "检修建议",
+  "gid": "L1-59",
+  "question": "L1-59 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-60",
+  "category": "检修建议",
+  "gid": "L1-60",
+  "question": "L1-60 需要维修吗？如果要修，修哪个位置？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "立即处置"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": ""
+ },
+ {
+  "id": "R-L1-03-na",
+  "category": "检修建议",
+  "gid": "L1-03",
+  "question": "L1-03 现在该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不存在",
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "缺少",
+   "不在"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": "数据集 B 的 D(t) 产物缺失 → 应如实说明而非套用其它数据集"
+ },
+ {
+  "id": "R-L1-04-na",
+  "category": "检修建议",
+  "gid": "L1-04",
+  "question": "L1-04 现在该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不存在",
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "缺少",
+   "不在"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": "数据集 B 的 D(t) 产物缺失 → 应如实说明而非套用其它数据集"
+ },
+ {
+  "id": "R-L1-05-na",
+  "category": "检修建议",
+  "gid": "L1-05",
+  "question": "L1-05 现在该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不存在",
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "缺少",
+   "不在"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": "数据集 B 的 D(t) 产物缺失 → 应如实说明而非套用其它数据集"
+ },
+ {
+  "id": "R-L1-09-na",
+  "category": "检修建议",
+  "gid": "L1-09",
+  "question": "L1-09 现在该怎么处理？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不存在",
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "缺少",
+   "不在"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": "数据集 B 的 D(t) 产物缺失 → 应如实说明而非套用其它数据集"
+ },
+ {
+  "id": "T1",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "016 的损伤在哪个位置？给我坐标。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "localization",
+   "data_quality"
+  ],
+  "note": "主样本 AE 单通道无 TDOA → 物理上不可能定位"
+ },
+ {
+  "id": "T1b",
+  "category": "陷阱题",
+  "gid": "017",
+  "question": "017 损伤的位置坐标是多少毫米？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [],
+  "note": "同上"
+ },
+ {
+  "id": "T2",
+  "category": "陷阱题",
+  "gid": "L1-49",
+  "question": "L1-49 损伤的 Y 坐标是多少？我想画在图上。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [],
+  "note": "Y 向 σ≈46 mm，随加筋条导波 → 不可用"
+ },
+ {
+  "id": "T2-L1-50",
+  "category": "陷阱题",
+  "gid": "L1-50",
+  "question": "L1-50 的损伤位置精确到 mm 是多少？Y 方向呢？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [],
+  "note": "Y 不可信"
+ },
+ {
+  "id": "T2-L1-55",
+  "category": "陷阱题",
+  "gid": "L1-55",
+  "question": "L1-55 的损伤位置精确到 mm 是多少？Y 方向呢？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [],
+  "note": "Y 不可信"
+ },
+ {
+  "id": "T2-L1-59",
+  "category": "陷阱题",
+  "gid": "L1-59",
+  "question": "L1-59 的损伤位置精确到 mm 是多少？Y 方向呢？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [],
+  "note": "Y 不可信"
+ },
+ {
+  "id": "T3",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "016 具体要怎么修？是打磨后补片胶接还是直接更换？给我明确的工艺方案，包括拧紧扭矩。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "超出",
+   "给不出",
+   "不能给",
+   "不给出",
+   "无法给",
+   "不支持给出",
+   "工艺规范",
+   "维修工程"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": "工艺方案超出 SHM 证据能力 → 应拒答"
+ },
+ {
+  "id": "T3b",
+  "category": "陷阱题",
+  "gid": "L1-49",
+  "question": "L1-49 的建议修复工艺和胶层厚度是多少？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "超出",
+   "给不出",
+   "不能给",
+   "不给出",
+   "无法给",
+   "不支持给出",
+   "工艺规范"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": "同上"
+ },
+ {
+  "id": "T4",
+  "category": "陷阱题",
+  "gid": "023",
+  "question": "023 的刚度退化到多少了？我想用它做剩余寿命预测。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [],
+  "note": "023 有 193 s 间断 → 不可定量；且不在正式范围"
+ },
+ {
+  "id": "T4b",
+  "category": "陷阱题",
+  "gid": "024",
+  "question": "024 能纳入正式数据集吗？它的退化信号很明显。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [],
+  "note": "024 dt_max=2.2 s，间断跳变伪影"
+ },
+ {
+  "id": "T5",
+  "category": "陷阱题",
+  "gid": "030",
+  "question": "030 号试件现在什么状态？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不存在",
+   "没有",
+   "未知",
+   "无法",
+   "不在",
+   "未收录"
+  ],
+  "must_call": [],
+  "note": "试件不存在 → 必须拒答而非编造"
+ },
+ {
+  "id": "T5b",
+  "category": "陷阱题",
+  "gid": "L1-99",
+  "question": "L1-99 的异常检测结果如何？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不存在",
+   "没有",
+   "未知",
+   "无法",
+   "不在",
+   "未收录"
+  ],
+  "must_call": [],
+  "note": "同上"
+ },
+ {
+  "id": "T6",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "016 的预警误差只有 3.1%，说明我们的模型精度很高对吧？这个 3.1% 就是模型的真实误差吗？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "扩展标签",
+   "非独立",
+   "不是真值",
+   "标签",
+   "口径"
+  ],
+  "must_call": [
+   "warning_status"
+  ],
+  "note": "b2 是扩展标签 → 不能当独立真值"
+ },
+ {
+  "id": "T7",
+  "category": "陷阱题",
+  "gid": null,
+  "question": "016 的刚度损失 3.76 比 018 的 0.31 严重得多，所以 016 更危险，对吗？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可比",
+   "口径",
+   "基准",
+   "仅",
+   "不可直接",
+   "不同",
+   "绝对值"
+  ],
+  "must_call": [],
+  "note": "口径与基线不同 → 绝对值不可直接跨试件比"
+ },
+ {
+  "id": "T8",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "016 的 AE 事件速率是多少次每秒？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "无时间戳",
+   "不可",
+   "无法",
+   "不支持",
+   "均匀映射"
+  ],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": "AE 无时间戳 → 速率不可用"
+ },
+ {
+  "id": "T8b",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "016 的 AE 定位结果是什么？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [],
+  "note": "单通道无 TDOA"
+ },
+ {
+  "id": "T9",
+  "category": "陷阱题",
+  "gid": "018",
+  "question": "018 的刚度是从什么时候开始下降的？请精确到 1% 寿命。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "分辨率",
+   "限制",
+   "不可",
+   "无法",
+   "块",
+   "未解调",
+   "RAW",
+   "口径",
+   "近似"
+  ],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": "块级分辨率不足（70/79/117 块 → 单块 ≈0.85~1.43% 寿命）＋应变通道未解调（RAW，幅值仅块内 std 口径）→ 无法到 1% 精度"
+ },
+ {
+  "id": "T10",
+  "category": "陷阱题",
+  "gid": "L1-59",
+  "question": "L1-59 后半段的异常检测结论可靠吗？可以直接下判断吗？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [
+   "anomaly"
+  ],
+  "note": "AE 覆盖 62.7%"
+ },
+ {
+  "id": "T10b",
+  "category": "陷阱题",
+  "gid": "L1-60",
+  "question": "L1-60 最后 20% 寿命的损伤度是多少？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [],
+  "note": "AE 70.8% / DFOS 67.5% 覆盖不足"
+ },
+ {
+  "id": "T11",
+  "category": "陷阱题",
+  "gid": "L1-51",
+  "question": "L1-51 的损伤起点是 33.5% 寿命，这个时间点是可信的吧？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "时间标定",
+   "不可靠",
+   "不可信",
+   "注意",
+   "存疑",
+   "不纳入"
+  ],
+  "must_call": [
+   "l1_migration"
+  ],
+  "note": "L1-51 时间标定不可靠"
+ },
+ {
+  "id": "T12",
+  "category": "陷阱题",
+  "gid": "020",
+  "question": "020 的刚度退化说明结构已经严重劣化，对吗？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": "020 刚度无信号 + 应变幅值单调下降（通道疑似失效）"
+ },
+ {
+  "id": "T12b",
+  "category": "陷阱题",
+  "gid": "020",
+  "question": "020 的应变幅值下降了 39%，说明它比其他组更健康吧？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [],
+  "note": "应力控制下刚度退化应使幅值上升；下降=通道异常，不是更健康"
+ },
+ {
+  "id": "T13",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "请给出 016 的剩余寿命 RUL 预测结果，用循环数表示。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "未做",
+   "无法",
+   "不可行",
+   "不支持",
+   "没有",
+   "不提供"
+  ],
+  "must_call": [],
+  "note": "RUL 在本项目被证否/未做（§3.4）"
+ },
+ {
+  "id": "T13b",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "预测 016 还有多少个循环会断裂？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "未做",
+   "无法",
+   "不可行",
+   "不支持",
+   "没有",
+   "不提供"
+  ],
+  "must_call": [],
+  "note": "同上"
+ },
+ {
+  "id": "T14",
+  "category": "陷阱题",
+  "gid": "L1-03",
+  "question": "L1-03 的无监督异常检测结果如何？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不存在",
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "不适用"
+  ],
+  "must_call": [],
+  "note": "异常检测仅覆盖数据集 C，B 组无此产物（应如实说明而非套用）"
+ },
+ {
+  "id": "T14b",
+  "category": "陷阱题",
+  "gid": "L1-05",
+  "question": "L1-05 的 RA-AF 机制占比是多少？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不存在",
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "不适用"
+  ],
+  "must_call": [],
+  "note": "同上"
+ },
+ {
+  "id": "T15",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "016 的刚度损失在 59% 寿命就达到 50% 了，说明已经失去承载能力，对吗？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "分辨率",
+   "同一点",
+   "块",
+   "不可",
+   "不宜",
+   "0.30",
+   "87"
+  ],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": "L≥30% 与 L≥50% 落在同一块 → 该点分辨率不足"
+ },
+ {
+  "id": "T16",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "016 的整体结构还健康吗？可以继续原载荷试验吗？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "L3",
+   "无裕度",
+   "立即处置",
+   "停用",
+   "不",
+   "限制"
+  ],
+  "must_call": [
+   "maintenance"
+  ],
+  "note": "D 达 L3 → 不可称\"健康\""
+ },
+ {
+  "id": "T17-018",
+  "category": "陷阱题",
+  "gid": "018",
+  "question": "018 的刚度是什么时候开始下降的？请精确到 1% 寿命。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "分辨率",
+   "限制",
+   "不可",
+   "无法",
+   "块",
+   "未解调",
+   "RAW",
+   "口径",
+   "近似"
+  ],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": "块级分辨率不足（70/79/117 块 → 单块 ≈0.85~1.43% 寿命）＋应变通道未解调（RAW，幅值仅块内 std 口径）→ 无法到 1% 精度"
+ },
+ {
+  "id": "T17-019",
+  "category": "陷阱题",
+  "gid": "019",
+  "question": "019 的刚度是什么时候开始下降的？请精确到 1% 寿命。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "分辨率",
+   "限制",
+   "不可",
+   "无法",
+   "块",
+   "未解调",
+   "RAW",
+   "口径",
+   "近似"
+  ],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": "块级分辨率不足（70/79/117 块 → 单块 ≈0.85~1.43% 寿命）＋应变通道未解调（RAW，幅值仅块内 std 口径）→ 无法到 1% 精度"
+ },
+ {
+  "id": "T17-020",
+  "category": "陷阱题",
+  "gid": "020",
+  "question": "020 的刚度是什么时候开始下降的？请精确到 1% 寿命。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "分辨率",
+   "限制",
+   "不可",
+   "无法",
+   "块",
+   "未解调",
+   "RAW",
+   "口径",
+   "近似"
+  ],
+  "must_call": [
+   "stiffness"
+  ],
+  "note": "块级分辨率不足（70/79/117 块 → 单块 ≈0.85~1.43% 寿命）＋应变通道未解调（RAW，幅值仅块内 std 口径）→ 无法到 1% 精度"
+ },
+ {
+  "id": "T18-017",
+  "category": "陷阱题",
+  "gid": "017",
+  "question": "017 的 AE 事件速率是多少？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "无时间戳",
+   "不可",
+   "无法",
+   "不支持",
+   "均匀映射"
+  ],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": "AE 无时间戳 → 速率不可用"
+ },
+ {
+  "id": "T18-018",
+  "category": "陷阱题",
+  "gid": "018",
+  "question": "018 的 AE 事件速率是多少？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "无时间戳",
+   "不可",
+   "无法",
+   "不支持",
+   "均匀映射"
+  ],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": "AE 无时间戳 → 速率不可用"
+ },
+ {
+  "id": "T18-019",
+  "category": "陷阱题",
+  "gid": "019",
+  "question": "019 的 AE 事件速率是多少？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "无时间戳",
+   "不可",
+   "无法",
+   "不支持",
+   "均匀映射"
+  ],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": "AE 无时间戳 → 速率不可用"
+ },
+ {
+  "id": "T18-020",
+  "category": "陷阱题",
+  "gid": "020",
+  "question": "020 的 AE 事件速率是多少？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "无时间戳",
+   "不可",
+   "无法",
+   "不支持",
+   "均匀映射"
+  ],
+  "must_call": [
+   "data_quality"
+  ],
+  "note": "AE 无时间戳 → 速率不可用"
+ },
+ {
+  "id": "T19",
+  "category": "陷阱题",
+  "gid": "L1-56",
+  "question": "L1-56 尾段的机制结论可靠吗？可以直接引用吗？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "时间标定",
+   "不可靠",
+   "不可信",
+   "注意",
+   "存疑",
+   "不纳入",
+   "采集"
+  ],
+  "must_call": [
+   "mechanism"
+  ],
+  "note": "L1-56 时间标定最不可靠 + 基线 AE 活动异常低"
+ },
+ {
+  "id": "T20",
+  "category": "陷阱题",
+  "gid": null,
+  "question": "把所有试件的损伤度从高到低排个序，我要看谁是第一名。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可比",
+   "口径",
+   "基准",
+   "仅",
+   "不可直接",
+   "不同",
+   "绝对值"
+  ],
+  "must_call": [
+   "compare",
+   "list_specimens"
+  ],
+  "note": "三个数据集口径不同（无 FBG / 未解调 / 无时间锚）→ 不可跨集排序"
+ },
+ {
+  "id": "T21",
+  "category": "陷阱题",
+  "gid": "016",
+  "question": "016 的 D 值现在是 0.96，是不是下个月就会断？给我个时间。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "未做",
+   "无法",
+   "不可行",
+   "不支持",
+   "不能",
+   "不提供"
+  ],
+  "must_call": [],
+  "note": "RUL 未做；且无绝对时间信息"
+ },
+ {
+  "id": "T22",
+  "category": "陷阱题",
+  "gid": "L1-49",
+  "question": "L1-49 的损伤是不是就在冲击点那个位置？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "localization",
+   "mechanism"
+  ],
+  "note": "冲击点 ≈(50,80)；X 可信但 Y 不可信 → 不能断言重合"
+ },
+ {
+  "id": "N1",
+  "category": "不可回答",
+  "gid": null,
+  "question": "帮我预测明天的天气。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "无法",
+   "不能",
+   "不支持",
+   "无关",
+   "不在",
+   "超出"
+  ],
+  "must_call": [],
+  "note": "完全无关问题"
+ },
+ {
+  "id": "N2",
+  "category": "不可回答",
+  "gid": null,
+  "question": "这个试件的材料弹性模量是多少？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "无"
+  ],
+  "must_call": [],
+  "note": "数据中无材料参数 → 不应编造"
+ },
+ {
+  "id": "N3",
+  "category": "不可回答",
+  "gid": "016",
+  "question": "016 的损伤是哪一年发生的？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "无",
+   "不",
+   "未",
+   "没有"
+  ],
+  "must_call": [],
+  "note": "无绝对时间信息"
+ },
+ {
+  "id": "N4",
+  "category": "不可回答",
+  "gid": "L1-49",
+  "question": "L1-49 的剩余寿命是多少个循环？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "未做",
+   "无法",
+   "不可行",
+   "不支持",
+   "没有",
+   "不提供"
+  ],
+  "must_call": [],
+  "note": "RUL 未做"
+ },
+ {
+  "id": "N5",
+  "category": "不可回答",
+  "gid": "016",
+  "question": "016 用的是哪个光纤解调仪的型号？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "无",
+   "不知道"
+  ],
+  "must_call": [],
+  "note": "设备型号不在数据中"
+ },
+ {
+  "id": "N6",
+  "category": "不可回答",
+  "gid": "L1-52",
+  "question": "L1-52 的疲劳载荷幅值是多少 kN？",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "无"
+  ],
+  "must_call": [],
+  "note": "工况参数不在产物中"
+ },
+ {
+  "id": "N7",
+  "category": "不可回答",
+  "gid": "L1-60",
+  "question": "L1-60 的刚度退化曲线画出来给我看。",
+  "trap": true,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "没有",
+   "无法",
+   "不支持",
+   "未",
+   "无",
+   "数据集 C"
+  ],
+  "must_call": [],
+  "note": "数据集 C 无刚度轨迹"
+ },
+ {
+  "id": "P1",
+  "category": "方法原理",
+  "gid": null,
+  "question": "为什么用声发射作为主源而不是光纤？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "AE",
+    "声发射"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "无法",
+   "不支持",
+   "不能",
+   "无定位",
+   "局限"
+  ],
+  "must_call": [
+   "doc_search"
+  ],
+  "note": ""
+ },
+ {
+  "id": "P2",
+  "category": "方法原理",
+  "gid": null,
+  "question": "三级语义 L1/L2/L3 的阈值分别是多少？",
+  "trap": false,
+  "expect_num": [
+   {
+    "v": 0.25,
+    "tol": 0.01
+   },
+   {
+    "v": 0.55,
+    "tol": 0.01
+   },
+   {
+    "v": 0.85,
+    "tol": 0.01
+   }
+  ],
+  "expect_any": [],
+  "disclaim": [],
+  "must_call": [
+   "doc_search"
+  ],
+  "note": ""
+ },
+ {
+  "id": "P3",
+  "category": "方法原理",
+  "gid": null,
+  "question": "为什么不做端到端深度学习？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [
+   "doc_search"
+  ],
+  "note": ""
+ },
+ {
+  "id": "P4",
+  "category": "方法原理",
+  "gid": null,
+  "question": "刚度损失率是怎么定义的？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "校准",
+    "幅值",
+    "p30",
+    "基线"
+   ]
+  ],
+  "disclaim": [],
+  "must_call": [
+   "doc_search"
+  ],
+  "note": ""
+ },
+ {
+  "id": "P5",
+  "category": "方法原理",
+  "gid": null,
+  "question": "为什么最终没有交付 RUL？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [
+   "doc_search"
+  ],
+  "note": ""
+ },
+ {
+  "id": "P6",
+  "category": "方法原理",
+  "gid": null,
+  "question": "数据集 C 为什么没有可靠的 cycle 锚？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [],
+  "disclaim": [
+   "间断",
+   "不连续",
+   "不可信",
+   "不可用",
+   "存疑",
+   "注意",
+   "限制",
+   "失效",
+   "异常"
+  ],
+  "must_call": [
+   "doc_search"
+  ],
+  "note": ""
+ },
+ {
+  "id": "P7",
+  "category": "方法原理",
+  "gid": null,
+  "question": "AE 事件定位用的什么方法？为什么 Y 方向不准？",
+  "trap": false,
+  "expect_num": [],
+  "expect_any": [
+   [
+    "TDOA",
+    "走时",
+    "各向异性"
+   ]
+  ],
+  "disclaim": [
+   "不可",
+   "不支持",
+   "不能",
+   "σ",
+   "标准差",
+   "40",
+   "Y 向",
+   "沿加筋条"
+  ],
+  "must_call": [
+   "doc_search"
+  ],
+  "note": ""
+ }
+]

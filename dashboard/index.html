@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHM-ONLINE · 疲劳机多源在线损伤监测平台</title>
+<link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ======================= 顶栏 ======================= -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark"><span></span></div>
+      <div class="brand-text">
+        <b>SHM-ONLINE</b>
+        <i>结构健康监测 · 在线损伤评估系统</i>
+      </div>
+    </div>
+
+    <div class="topbar-center">
+      <div class="equip">
+        <label>数据集</label>
+        <select id="dsSel"></select>
+      </div>
+      <div class="equip">
+        <label>被测试件</label>
+        <select id="gidSel"></select>
+      </div>
+      <div class="equip">
+        <label>试验台架</label>
+        <div class="equip-val" id="equipRig">HYD-04 电液伺服疲劳机</div>
+      </div>
+      <div class="equip">
+        <label>采集模式</label>
+        <div class="equip-val" id="equipMode">多源同步 · 10&nbsp;Hz</div>
+      </div>
+    </div>
+
+    <div class="topbar-right">
+      <div class="sys-state" id="sysState">
+        <span class="dot"></span><b id="sysStateText">待机</b>
+      </div>
+      <div class="clock" id="clock">--:--:--</div>
+    </div>
+  </header>
+
+  <!-- ======================= 控制条 ======================= -->
+  <div class="controlbar">
+    <button id="btnRun" class="btn btn-run" disabled>
+      <span class="ico ico-run"></span><b>开始监测</b>
+    </button>
+    <button id="btnReset" class="btn btn-ghost" disabled>
+      <span class="ico ico-reset"></span>复位
+    </button>
+    <button id="btnSound" class="btn btn-ghost" title="报警提示音">
+      <span class="ico ico-snd"></span><b id="sndText">声音 开</b>
+    </button>
+
+    <div class="speed">
+      <label>回放倍率</label>
+      <div class="seg" id="speedSeg">
+        <button data-sp="30">30×</button>
+        <button data-sp="60">60×</button>
+        <button data-sp="120" class="on">120×</button>
+        <button data-sp="300">300×</button>
+        <button data-sp="600">600×</button>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-head">
+        <span>试验进程</span>
+        <b id="tlPct">0.0%</b>
+      </div>
+      <input id="seek" type="range" min="0" max="1000" value="0" step="1" disabled>
+      <div class="tl-foot">
+        <span id="tNow">00:00:00</span>
+        <span id="tTotal">/ 00:00:00</span>
+      </div>
+    </div>
+
+    <div class="readouts">
+      <div class="ro"><label>采样点</label><b id="roIdx">0</b></div>
+      <div class="ro"><label>AE 事件</label><b id="roAe">0</b></div>
+      <div class="ro"><label>数据帧</label><b id="roRate">0.0 /s</b></div>
+    </div>
+  </div>
+
+  <!-- ======================= 主区 ======================= -->
+  <main class="mainrow">
+
+    <!-- 损伤度仪表 -->
+    <section class="panel gauge-panel">
+      <div class="phead">
+        <div class="ptitle"><i></i>DAMAGE INDEX<b id="tDmg">损伤度 D(t)</b></div>
+        <div class="ptag" id="gaugeTag">IDLE</div>
+      </div>
+      <div class="gauge-wrap">
+        <svg class="gauge" viewBox="0 0 200 200">
+          <circle class="g-ticks" cx="100" cy="100" r="90"></circle>
+          <circle class="g-bg" cx="100" cy="100" r="76"></circle>
+          <circle class="g-fg" id="gaugeArc" cx="100" cy="100" r="76"
+                  transform="rotate(-90 100 100)"></circle>
+          <circle class="g-mark" id="gaugeMark25" cx="100" cy="100" r="76"
+                  transform="rotate(-90 100 100)"></circle>
+          <circle class="g-mark" id="gaugeMark55" cx="100" cy="100" r="76"
+                  transform="rotate(-90 100 100)"></circle>
+          <circle class="g-mark" id="gaugeMark85" cx="100" cy="100" r="76"
+                  transform="rotate(-90 100 100)"></circle>
+        </svg>
+        <div class="gauge-mid">
+          <div class="g-val" id="dVal">0.000</div>
+          <div class="g-unit" id="dUnit">损伤度 D</div>
+          <div class="g-badge" id="dBadge">正常</div>
+        </div>
+      </div>
+      <div class="gauge-foot">
+        <div class="gf"><label>峰值 D</label><b id="dMax">0.000</b></div>
+        <div class="gf"><label>寿命进度</label><b id="dLife">0.0%</b></div>
+        <div class="gf"><label id="dMarginLbl">剩余裕度</label><b id="dMargin">1.000</b></div>
+      </div>
+    </section>
+
+    <!-- 主趋势 -->
+    <section class="panel trend-panel">
+      <div class="phead">
+        <div class="ptitle"><i></i>DAMAGE TREND<b id="tTrend">损伤度 D(t) 趋势 / 分级阈值</b></div>
+        <div class="legend">
+          <span class="lg lg-d"><i></i><span id="lgD">D(t)</span></span>
+          <span class="lg lg-r"><i></i>证据 risk</span>
+          <span class="lg lg-b2" id="lgB2" style="display:none"><i></i>b2 扩展参考</span>
+          <span class="lg lg-b3" id="lgB3" style="display:none"><i></i>b3 断裂锚</span>
+          <span class="lg lg-c0" id="lgC0" style="display:none"><i></i>c0 基线终点</span>
+          <span class="lg lg-rf" id="lgRef" style="display:none"><i></i>论文检测点</span>
+          <span class="lg lg-rf" id="lgHI" style="display:none"><i></i><span id="lgHIt">论文 HI_F 参考（离线）</span></span>
+        </div>
+      </div>
+      <canvas id="cvTrend"></canvas>
+    </section>
+
+    <!-- 分级预警 -->
+    <section class="panel level-panel">
+      <div class="phead">
+        <div class="ptitle"><i></i>ALARM STAGES<b>分级预警</b></div>
+      </div>
+      <div class="lamps">
+        <div class="lamp" data-lv="1">
+          <span class="lp lp1"></span>
+          <div class="lt"><b>注 意</b><i>D ≥ 0.25</i></div>
+          <div class="lv-time" id="tLv1">--</div>
+        </div>
+        <div class="lamp" data-lv="2">
+          <span class="lp lp2"></span>
+          <div class="lt"><b>预 警</b><i>D ≥ 0.55</i></div>
+          <div class="lv-time" id="tLv2">--</div>
+        </div>
+        <div class="lamp" data-lv="3">
+          <span class="lp lp3"></span>
+          <div class="lt"><b>临 危</b><i>D ≥ 0.85</i></div>
+          <div class="lv-time" id="tLv3">--</div>
+        </div>
+      </div>
+      <div class="verdict">
+        <label>综合判定</label>
+        <div class="verdict-val" id="verdict">系统待机</div>
+        <div class="verdict-sub" id="verdictSub">等待开始监测指令</div>
+      </div>
+      <div class="bars">
+        <div class="bar-row">
+          <span>e_ae 声发射证据</span>
+          <div class="bar"><i id="barAE"></i></div><b id="valAE">0.000</b>
+        </div>
+        <div class="bar-row">
+          <span>e_st 应变辅证</span>
+          <div class="bar"><i id="barST" class="warn"></i></div><b id="valST">0.000</b>
+        </div>
+        <div class="bar-row">
+          <span>risk 融合风险</span>
+          <div class="bar"><i id="barRK" class="risk"></i></div><b id="valRK">0.000</b>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= 多源子面板 ======================= -->
+  <section class="subrow">
+    <div class="panel chan">
+      <div class="phead">
+        <div class="ptitle"><i class="c-ae"></i>AE<b id="tAE">声发射 · 事件率 / 峰值</b></div>
+        <div class="chan-val" id="vAE">—</div>
+      </div>
+      <canvas id="cvAE"></canvas>
+    </div>
+    <div class="panel chan">
+      <div class="phead">
+        <div class="ptitle"><i class="c-fo"></i>FBG<b id="tFO">光纤光栅 · 多通道</b></div>
+        <div class="chan-val" id="vFO">—</div>
+      </div>
+      <canvas id="cvFO"></canvas>
+    </div>
+    <div class="panel chan">
+      <div class="phead">
+        <div class="ptitle"><i class="c-st"></i>STRAIN<b id="tST">应变 · 波形 / 波动</b></div>
+        <div class="chan-val" id="vST">—</div>
+      </div>
+      <canvas id="cvST"></canvas>
+    </div>
+    <div class="panel chan">
+      <div class="phead">
+        <div class="ptitle"><i class="c-ev"></i>EVIDENCE<b>证据层分解</b></div>
+        <div class="chan-val" id="vEV">—</div>
+      </div>
+      <canvas id="cvEV"></canvas>
+    </div>
+  </section>
+
+  <!-- ======================= 分布式应变空间分布 (L1 专有) ======================= -->
+  <section class="dfosrow" id="dfosRow">
+    <div class="panel">
+      <div class="phead">
+        <div class="ptitle"><i class="c-df"></i>DISTRIBUTED STRAIN<b id="tDF">分布式应变 · 空间分布 / 相对基线偏离</b></div>
+        <div class="chan-val" id="vDF">—</div>
+      </div>
+      <div class="dfos-wrap">
+        <canvas id="cvDFHeat"></canvas>
+        <canvas id="cvDFProf"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= 底栏 ======================= -->
+  <section class="bottomrow">
+    <div class="panel log-panel">
+      <div class="phead">
+        <div class="ptitle"><i></i>EVENT LOG<b>报警与事件记录</b></div>
+        <div class="ptag" id="logCount">0 条</div>
+      </div>
+      <div class="log-list" id="logList">
+        <div class="log-empty">— 暂无记录 —</div>
+      </div>
+    </div>
+
+    <div class="panel health-panel">
+      <div class="phead">
+        <div class="ptitle"><i></i>CHANNEL HEALTH<b>多源通道状态</b></div>
+      </div>
+      <table class="health">
+        <thead>
+          <tr><th>通道</th><th>采样</th><th>通道数</th><th>累计数据量</th><th>状态</th></tr>
+        </thead>
+        <tbody id="chanBody">
+          <tr id="hAE"><td>声发射 AE</td><td>事件流</td><td>25</td><td class="n" id="hAEn">0</td>
+              <td><span class="st ok">在线</span></td></tr>
+          <tr id="hFO"><td>光纤光栅 FBG</td><td>10 Hz</td><td id="hFOc">—</td><td class="n" id="hFOn">0</td>
+              <td><span class="st ok" id="hFOs">在线</span></td></tr>
+          <tr id="hST"><td>应变 STRAIN</td><td>10 Hz</td><td>1</td><td class="n" id="hSTn">0</td>
+              <td><span class="st ok">在线</span></td></tr>
+          <tr id="hDI"><td>损伤度引擎</td><td>500 点/块</td><td>—</td><td class="n" id="hDIn">0</td>
+              <td><span class="st ok" id="hDIs">在线</span></td></tr>
+        </tbody>
+      </table>
+      <div class="health-foot">
+        <span>算法：多源证据融合 · 在线因果流式　计数口径：已回放的原始采样点</span>
+        <span id="algoInfo">D ∈ [0,1] · 阈值 0.25 / 0.55 / 0.85</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="boot" id="boot">
+    <div class="boot-box">
+      <div class="boot-bar"><i></i></div>
+      <div class="boot-text" id="bootText">正在加载数据包 …</div>
+    </div>
+  </div>
+</div>
+
+<script src="data/index.js"></script>
+<script src="data/index_l1.js"></script>
+<script src="data/index_l1v2.js"></script>
+<script src="assets/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+# =====================================================================
+#  .gitignore —— 多源在线损伤度 D(t) 监测
+#
+#  原则：
+#    ✗ 不提交：原始数据、结果产物、PDF 文献、敏感文件、缓存、运行日志、大体积归档
+#    ✓ 提交：复现所需的一切（代码 / 配置 / 题集 / 前端 / 文档 / 协议表）
+#
+#  ⚠️ 数据已迁到外接盘（见 paths.json 与 docs\数据路径与外接盘.md），仓库里是 junction。
+#     Git 会顺着 junction 递归，所以【原始数据】段必须保留，否则会把 30 GB 数据塞进版本库。
+# =====================================================================
+
+# ── 敏感文件（绝不提交）───────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+agent/.env
+*.key
+*.pem
+*credential*
+*secret*
+docs/申报书*
+
+# ── 原始数据（外接盘 junction；勿删本段，见文件头说明）──────────────────
+l1/L1-*/
+main/[0-9][0-9][0-9]/
+main/aligned/
+main/weak_labels/
+phmdc/T[1-9]/
+# 兜底：原始数据类型
+*.pridb
+*.lvm
+*.tdms
+
+# ── 结果与产物（可重跑生成）───────────────────────────────────────────
+results/
+main/results/
+main/figures/
+l1/results/
+l1/figures/
+phmdc/results/
+agent/eval/results/
+agent/log/
+dashboard/data/
+
+# ── 缓存（可重建）─────────────────────────────────────────────────────
+main/cache/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+env/
+.mypy_cache/
+.ruff_cache/
+
+# ── PDF 与文献全文（版权 / 体积）──────────────────────────────────────
+*.pdf
+*fulltext*.txt
+docs/论文_*.txt
+
+# ── 大体积归档 / 媒体 ────────────────────────────────────────────────
+*.zip
+*.7z
+*.rar
+*.tar.gz
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ── 编辑器 / 系统 ────────────────────────────────────────────────────
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+
+# =====================================================================
+#  ⚠️ 以下是「明确保留、不要忽略」的清单，仅供核对（gitignore 不写否定规则即不会被忽略）：
+#
+#    代码      *.py —— run.py · plot.py · mono_ablation.py · main\ · l1\ · shm\ · phmdc\ · agent\
+#    文档      *.md —— README.md · docs\details.md · docs\数据路径与外接盘.md · 各子目录 README.md
+#    配置      *.json —— paths.json · agent\eval\cases.json 等（题集/脚本地面真值）
+#              .env.example · tools\relink_data.ps1
+#    前端      dashboard\index.html · dashboard\assets\dashboard.{js,css}
+#    表格      main\数据记录.xlsx            试验协议表（加载协议，复现必需）
+#              phmdc\ReadMe.docx             数据集官方说明
+#              phmdc\index.csv · labels.csv  裂纹长度真值索引（若要一并剔除：加 `phmdc/*.csv`）
+#
+#    注意：results\ 与 dashboard\data\ 不入库 ⇒ 新克隆后需重跑导出/评估脚本，
+#           Agent 的只读产物（l1\results\_l1_*.npz 等）同理需先重算。
+# =====================================================================
+
